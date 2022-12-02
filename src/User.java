@@ -30,4 +30,8 @@ public class User {
     public ArrayList<String> getPhoneNumber() {
         return phoneNumber;
     }
+
+    public static void setHelpUserNumber(long helpUserNumber) {
+        User.helpUserNumber = helpUserNumber;
+    }
 }

@@ -15,5 +15,19 @@ public class User {
     private ArrayList<String> phoneNumber;      // multiple phoneNumbers
 
     // constructor
+    public int getAge() {
+        return age;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public User(long userNumber) {
+        this.userNumber = userNumber;
+    }
+
+    public ArrayList<String> getPhoneNumber() {
+        return phoneNumber;
+    }
 }

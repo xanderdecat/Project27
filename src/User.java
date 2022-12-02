@@ -31,7 +31,5 @@ public class User {
         return phoneNumber;
     }
 
-    public long getUserNumber() {
-        return userNumber;
-    }
+
 }

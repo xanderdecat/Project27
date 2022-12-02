@@ -22,4 +22,8 @@ public class User {
     public String getLastName() {
         return lastName;
     }
+
+    public User(long userNumber) {
+        this.userNumber = userNumber;
+    }
 }

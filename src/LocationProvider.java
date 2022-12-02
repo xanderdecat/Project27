@@ -6,6 +6,7 @@ public class LocationProvider extends Provider {
     // instantievariabelen
     private static long helpLocPNumber = 0;
     private long locPNumber;
+    // private ... image;
     private ArrayList<Location> locations;
 
     // constructor

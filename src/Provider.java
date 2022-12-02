@@ -17,7 +17,7 @@ public class Provider extends User {
 
     // constructor
     public Provider(String firstName, String lastName, LocalDate dateOfBirth, ArrayList<String> emails, ArrayList<String> phoneNumber, String companyName, String VATnumber, String accountNumber, String streetName, int houseNumber, int ZIP, String city, String country) {
-        super(firstName, lastName, dateOfBirth, emails, phoneNumber);
+        super(firstName, lastName, dateOfBirth, emails, phoneNumber);       // verwijzen naar user klasse
         this.providerNumber = helpProviderNumber++;
         this.companyName = companyName;
         this.VATnumber = VATnumber;

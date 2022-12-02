@@ -26,4 +26,8 @@ public class User {
     public User(long userNumber) {
         this.userNumber = userNumber;
     }
+
+    public ArrayList<String> getPhoneNumber() {
+        return phoneNumber;
+    }
 }

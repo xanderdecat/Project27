@@ -34,4 +34,8 @@ public class User {
     public static void setHelpUserNumber(long helpUserNumber) {
         User.helpUserNumber = helpUserNumber;
     }
+
+    public long getUserNumber() {
+        return userNumber;
+    }
 }

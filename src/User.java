@@ -17,7 +17,16 @@ public class User {
     private ArrayList<Review> reviews;
 
     // constructor
-
-
-
+    public User(String firstName, String lastName, LocalDate dateOfBirth, ArrayList<String> emails, ArrayList<String> phoneNumbers) {
+        this.userNumber = helpUserNumber++;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.name = firstName + " " + lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.age = dateOfBirth.compareTo(LocalDate.now());      // correct?
+        this.emails = emails;
+        this.phoneNumbers = phoneNumbers;
+        this.history = new ArrayList<>();
+        this.reviews = new ArrayList<>();
+    }
 }

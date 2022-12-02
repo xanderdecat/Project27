@@ -12,24 +12,12 @@ public class User {
     private LocalDate dateOfBirth;
     private int age;                            // derived from dateOfBirth
     private ArrayList<String> emails;           // multiple emails
-    private ArrayList<String> phoneNumber;      // multiple phoneNumbers
+    private ArrayList<String> phoneNumbers;     // multiple phoneNumbers
+    private ArrayList<Event> history;
+    private ArrayList<Review> reviews;
 
     // constructor
-    public int getAge() {
-        return age;
-    }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public User(long userNumber) {
-        this.userNumber = userNumber;
-    }
-
-    public ArrayList<String> getPhoneNumber() {
-        return phoneNumber;
-    }
 
 
 }

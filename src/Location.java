@@ -46,4 +46,12 @@ public class Location {
         this.description = description;
         this.linkToPage = linkToPage;
     }
+
+    public long getLocPNumber() {
+        return locPNumber;
+    }
+
+    public static long getHelpLocationNumber() {
+        return helpLocationNumber;
+    }
 }

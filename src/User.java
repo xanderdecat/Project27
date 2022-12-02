@@ -31,10 +31,6 @@ public class User {
         return phoneNumber;
     }
 
-    public static void setHelpUserNumber(long helpUserNumber) {
-        User.helpUserNumber = helpUserNumber;
-    }
-
     public long getUserNumber() {
         return userNumber;
     }

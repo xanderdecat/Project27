@@ -14,6 +14,7 @@ public class Provider extends User {
     private int ZIP;
     private String city;
     private String country;
+    private ArrayList<>
 
     // constructor
     public Provider(String firstName, String lastName, LocalDate dateOfBirth, ArrayList<String> emails, ArrayList<String> phoneNumber, String companyName, String VATnumber, String accountNumber, String streetName, int houseNumber, int ZIP, String city, String country) {

@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class User {
@@ -23,10 +24,104 @@ public class User {
         this.lastName = lastName;
         this.name = firstName + " " + lastName;
         this.dateOfBirth = dateOfBirth;
-        this.age = dateOfBirth.compareTo(LocalDate.now());      // correct?
+        this.age = Period.between(dateOfBirth, LocalDate.now()).getYears();      // correct
         this.emails = emails;
         this.phoneNumbers = phoneNumbers;
         this.history = new ArrayList<>();
         this.reviews = new ArrayList<>();
     }
+
+    public static long getHelpUserNumber() {
+        return helpUserNumber;
+    }
+
+    public static void setHelpUserNumber(long helpUserNumber) {
+        User.helpUserNumber = helpUserNumber;
+    }
+
+    public long getUserNumber() {
+        return userNumber;
+    }
+
+    public void setUserNumber(long userNumber) {
+        this.userNumber = userNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public ArrayList<String> getEmails() {
+        return emails;
+    }
+
+    public void setEmails(ArrayList<String> emails) {
+        this.emails = emails;
+    }
+
+    public ArrayList<String> getPhoneNumbers() {
+        return phoneNumbers;
+    }
+
+    public void setPhoneNumbers(ArrayList<String> phoneNumbers) {
+        this.phoneNumbers = phoneNumbers;
+    }
+
+    public ArrayList<Event> getHistory() {
+        return history;
+    }
+
+    public void setHistory(ArrayList<Event> history) {
+        this.history = history;
+    }
+
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public Event createEventProposal(){
+        ArrayList<>
+        Event eventProposal = new Event(this.getUserNumber(), )
+    }
+    public
 }

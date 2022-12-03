@@ -1,4 +1,6 @@
+import java.net.URL;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.Period;
 import java.util.ArrayList;
 
@@ -119,9 +121,9 @@ public class User {
         this.reviews = reviews;
     }
 
-    public Event createEventProposal(){
-        ArrayList<>
-        Event eventProposal = new Event(this.getUserNumber(), )
+    public Event createEventProposal(String eventName, String city, String country, LocalDateTime startDate, LocalDateTime endDate, LocalDateTime eventDuration, String description, URL linkToPage){
+        Event eventProposal = new Event(this.getUserNumber(), eventName, city, country, startDate, endDate, eventDuration, description, linkToPage);
+        ArrayList<Provider>
     }
     public
 }

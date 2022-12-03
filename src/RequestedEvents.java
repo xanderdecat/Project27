@@ -2,7 +2,7 @@ import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class RequestedEvents {
+public class RequestedEvents {      //klasse gebruikt om events aan providers aan te bieden
     private enum Service {music, material, service, location}
     private User organizer;
     private Provider requestedProvider;
@@ -21,4 +21,5 @@ public class RequestedEvents {
     private LocalDateTime endDate;
     private String description;
     private URL linkToPage;
+
 }

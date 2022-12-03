@@ -3,6 +3,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Event {
+
+
     private enum stage {created, acceptedByAllProviders, transactionCompleted, last48hoursBeforeStart, ended}
 
     // instantievariabelen
@@ -28,10 +30,10 @@ public class Event {
     // constructor
 
 
-    public Event(long eventUserNumber, ArrayList<Provider> eventProviderNumbers, long eventNumber, String eventName, Location location, String streetName, int houseNumber, int ZIP, String city, String country, LocalDateTime startDate, LocalDateTime confirmationDate, LocalDateTime endDate, LocalDateTime eventDuration, String description, URL linkToPage, ArrayList<Review> reviews) {
+    public Event(long eventUserNumber, ArrayList<Provider> eventProviderNumbers, long eventNumber, String eventName, Location location, String streetName, int houseNumber, int ZIP, String city, String country, LocalDateTime startDate, LocalDateTime endDate, LocalDateTime eventDuration, String description, URL linkToPage, ArrayList<Review> reviews) {
         this.eventUserNumber = eventUserNumber;
         this.eventProviderNumbers = eventProviderNumbers;
-        this.eventNumber = eventNumber;
+        this.eventNumber = helpEventNumber + 1;
         this.eventName = eventName;
         this.location = location;
         this.streetName = streetName;
@@ -40,11 +42,26 @@ public class Event {
         this.city = city;
         this.country = country;
         this.startDate = startDate;
-        this.confirmationDate = confirmationDate;
+        this.confirmationDate = startDate.minusDays(2);
         this.endDate = endDate;
         this.eventDuration = eventDuration;
         this.description = description;
         this.linkToPage = linkToPage;
         this.reviews = reviews;
+    }
+    // constructor om een event aan te maken met minimale informatie
+
+    public Event(long eventUserNumber, String eventName, String city, String country, LocalDateTime startDate, LocalDateTime endDate, LocalDateTime eventDuration, String description, URL linkToPage) {
+        this.eventUserNumber = eventUserNumber;
+        this.eventNumber = helpEventNumber +1;
+        this.eventName = eventName;
+        this.city = city;
+        this.country = country;
+        this.startDate = startDate;
+        this.confirmationDate = startDate.minusDays(2);
+        this.endDate = endDate;
+        this.eventDuration = eventDuration;
+        this.description = description;
+        this.linkToPage = linkToPage;
     }
 }

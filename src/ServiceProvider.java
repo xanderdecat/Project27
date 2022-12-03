@@ -4,17 +4,15 @@ import java.util.ArrayList;
 
 public class ServiceProvider extends Provider {
 
-
-
     // enum van service types
-    public enum serviceTypes {Cleaning, bar};
+    public enum serviceType {Cleaning, Bar};
 
     // instantievariabelen
     private static long helpSerPNumber = 0;
     private long serPNumber;
     // private ... image;
     private String serviceName;
-    private serviceTypes typeOfService;
+    private serviceType typeOfService;
     private LocalDate activityDate;
     private int amountOfPeople;
     private long pricehour;

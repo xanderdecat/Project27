@@ -12,24 +12,21 @@ public class User {
     private LocalDate dateOfBirth;
     private int age;                            // derived from dateOfBirth
     private ArrayList<String> emails;           // multiple emails
-    private ArrayList<String> phoneNumber;      // multiple phoneNumbers
+    private ArrayList<String> phoneNumbers;     // multiple phoneNumbers
+    private ArrayList<Event> history;
+    private ArrayList<Review> reviews;
 
     // constructor
-    public int getAge() {
-        return age;
+    public User(String firstName, String lastName, LocalDate dateOfBirth, ArrayList<String> emails, ArrayList<String> phoneNumbers) {
+        this.userNumber = helpUserNumber++;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.name = firstName + " " + lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.age = dateOfBirth.compareTo(LocalDate.now());      // correct?
+        this.emails = emails;
+        this.phoneNumbers = phoneNumbers;
+        this.history = new ArrayList<>();
+        this.reviews = new ArrayList<>();
     }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public User(long userNumber) {
-        this.userNumber = userNumber;
-    }
-
-    public ArrayList<String> getPhoneNumber() {
-        return phoneNumber;
-    }
-
-
 }

@@ -3,8 +3,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Event {
-
-
     private enum stage {created, acceptedByAllProviders, transactionCompleted, last48hoursBeforeStart, ended}
 
     // instantievariabelen
@@ -63,5 +61,10 @@ public class Event {
         this.eventDuration = eventDuration;
         this.description = description;
         this.linkToPage = linkToPage;
+    }
+
+    public void initiateTransaction () {
+        if (!confirmationDate.isBefore(LocalDateTime.now()))
+
     }
 }

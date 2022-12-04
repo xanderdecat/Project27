@@ -16,6 +16,7 @@ public class User {
     private int age;                            // derived from dateOfBirth
     private ArrayList<String> emails;           // multiple emails
     private ArrayList<String> phoneNumbers;     // multiple phoneNumbers
+    private ArrayList<Event> actualEvents;
     private ArrayList<Event> history;
     private ArrayList<Review> reviews;
 
@@ -29,6 +30,7 @@ public class User {
         this.age = Period.between(dateOfBirth, LocalDate.now()).getYears();      // correct
         this.emails = emails;
         this.phoneNumbers = phoneNumbers;
+        this.actualEvents = new ArrayList<>();
         this.history = new ArrayList<>();
         this.reviews = new ArrayList<>();
     }
@@ -36,8 +38,11 @@ public class User {
     // methodes
     public Event createEmptyEvent (String eventName, LocalDateTime startDate, LocalDateTime endDate, String description, URL linkToPage) {
         Event newEvent = new Event(getUserNumber(), eventName, startDate, endDate, description, linkToPage);
-
+        actualEvents.add(newEvent);
+        return newEvent;
     }
+
+
 
 
 

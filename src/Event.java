@@ -19,7 +19,7 @@ public class Event {
     private String city;
     private String country;
     private LocalDateTime startDate;
-    private LocalDateTime confirmationDate;
+    private LocalDateTime confirmationDate;     // 2 dagen voor startDate
     private LocalDateTime endDate;
     private long eventDuration;
     private String description;
@@ -27,8 +27,6 @@ public class Event {
     private ArrayList<Review> reviews;
 
     // constructor
-
-
     public Event(long eventUserNumber, ArrayList<Provider> eventProviderNumbers, long eventNumber, String eventName, Location location, String streetName, int houseNumber, int ZIP, String city, String country, LocalDateTime startDate, LocalDateTime endDate, String description, URL linkToPage, ArrayList<Review> reviews) {
         this.eventUserNumber = eventUserNumber;
         this.eventProviderNumbers = eventProviderNumbers;
@@ -64,6 +62,21 @@ public class Event {
         this.linkToPage = linkToPage;
     }
 
+    // emptyEvent
+    public Event(long eventUserNumber, String eventName, LocalDateTime startDate, LocalDateTime endDate, String description, URL linkToPage) {
+        this.eventUserNumber = eventUserNumber;
+        this.eventNumber = helpEventNumber++;
+        this.eventName = eventName;
+        this.confirmationDate = startDate.minusDays(2);
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.eventDuration = calculateDuration(startDate, endDate);
+        this.description = description;
+        this.linkToPage = linkToPage;
+        this.reviews = new ArrayList<>();
+    }
+
+    // methodes
     public long calculateDuration (LocalDateTime startDate, LocalDateTime endDate) {
         Duration tijd = Duration.between(startDate, endDate);
         if (tijd.toHours() > 24)
@@ -71,12 +84,4 @@ public class Event {
         return tijd.toHours();
     }
 
-
-    /* TO DO XANDER
-    public void initiateTransaction () {
-        if (!confirmationDate.isBefore(LocalDateTime.now()))
-
-    }
-
-     */
 }

@@ -33,6 +33,20 @@ public class User {
         this.reviews = new ArrayList<>();
     }
 
+    // methodes
+    public Event createEmptyEvent (String eventName, LocalDateTime startDate, LocalDateTime endDate, String description, URL linkToPage) {
+        Event newEvent = new Event(getUserNumber(), eventName, startDate, endDate, description, linkToPage);
+
+    }
+
+
+
+
+
+
+
+
+    // getters en setters
     public static long getHelpUserNumber() {
         return helpUserNumber;
     }
@@ -120,14 +134,5 @@ public class User {
     public void setReviews(ArrayList<Review> reviews) {
         this.reviews = reviews;
     }
-
-    // methodes
-    /*
-    public Event createEventProposal(String eventName, String city, String country, LocalDateTime startDate, LocalDateTime endDate, String description, URL linkToPage){
-        Event eventProposal = new Event(this.getUserNumber(), eventName, city, country, startDate, endDate, description, linkToPage);
-        ArrayList<Provider>
-    }
-
-     */
 
 }

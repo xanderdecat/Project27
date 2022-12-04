@@ -121,12 +121,13 @@ public class User {
         this.reviews = reviews;
     }
 
-    /*  TO DO OLAF
-    public Event createEventProposal(String eventName, String city, String country, LocalDateTime startDate, LocalDateTime endDate, LocalDateTime eventDuration, String description, URL linkToPage){
-        Event eventProposal = new Event(this.getUserNumber(), eventName, city, country, startDate, endDate, eventDuration, description, linkToPage);
+    // methodes
+    /*
+    public Event createEventProposal(String eventName, String city, String country, LocalDateTime startDate, LocalDateTime endDate, String description, URL linkToPage){
+        Event eventProposal = new Event(this.getUserNumber(), eventName, city, country, startDate, endDate, description, linkToPage);
         ArrayList<Provider>
     }
-    public
 
      */
+
 }

@@ -63,8 +63,11 @@ public class Event {
         this.linkToPage = linkToPage;
     }
 
+    /* TO DO XANDER
     public void initiateTransaction () {
         if (!confirmationDate.isBefore(LocalDateTime.now()))
 
     }
+
+     */
 }

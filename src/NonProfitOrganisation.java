@@ -11,4 +11,8 @@ public class NonProfitOrganisation {
     private String description;
     private String accountNumber;
     private cause causeOfNPO;
+
+    // constructor
+
+
 }

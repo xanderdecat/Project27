@@ -16,22 +16,6 @@ public class GUI{
         frame.setVisible(true);
 
 
-
-        final JTextArea textArea = new JTextArea(10, 40);
-        f.getContentPane().add(BorderLayout.CENTER, textArea);
-        final JButton button = new JButton("Click Me");
-        f.getContentPane().add(BorderLayout.SOUTH, button);
-        button.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                textArea.append("Button was clicked\n");
-
-            }
-        });
-
-
-
     }
 
 }

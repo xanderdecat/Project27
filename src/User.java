@@ -43,14 +43,6 @@ public class User {
     }
 
 
-
-
-
-
-
-
-
-
     // getters en setters
     public static long getHelpUserNumber() {
         return helpUserNumber;
